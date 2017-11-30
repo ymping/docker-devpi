@@ -7,7 +7,9 @@ You can use this container to speed up your python package installation by using
 # Getting Started
 
 ## Installation
-docker build -t devpi https://github.com/ymping/docker-devpi.git
+Pull from docker hub: `docker pull ymping/docker-devpi`
+or
+Build from github: `docker build -t ymping/docker-devpi https://github.com/ymping/docker-devpi.git`
 
 ## Quickstart
 
@@ -15,7 +17,7 @@ docker build -t devpi https://github.com/ymping/docker-devpi.git
 docker run -d --name devpi \
 	--publish 3141:3141 \
 	--volume /srv/docker/devpi:/data \
-	--env=DEVPI_PASSWORD=ChangeToYourPassword
+	--env=DEVPI_PASSWORD=ChangeToYourPassword \
 	--restart always \
-	devpi
+	ymping/docker-devpi
 ```
