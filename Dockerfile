@@ -9,7 +9,9 @@ ENV DEVPI_SERVER_VERSION=4.4.0 \
 	DEVPI_CLIENTDIR=/data/client \
 	MIRROR_URL=https://pypi.doubanio.com/simple/
 
-RUN pip install \
+RUN apk add --no-cache build-base libffi-dev
+
+RUN pip install --no-cache \
 	"devpi-client==${DEVPI_CLIENT_VERSION}" \
 	"devpi-web==${DEVPI_WEB_VERSION}" \
 	"devpi-server==${DEVPI_SERVER_VERSION}"
