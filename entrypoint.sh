@@ -1,7 +1,7 @@
 #!/bin/bash
 
-set -e
-set -x
+# set -e
+# set -x
 
 function initialise_devpi {
     echo "[RUN]: Initialise devpi-server"
